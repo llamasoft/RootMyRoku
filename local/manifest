@@ -1,0 +1,25 @@
+title=Root My Roku
+major_version=9
+minor_version=4
+build_version=4200
+
+##   Channel Assets
+###  Main Menu Icons / Channel Poster Artwork
+#### Image sizes are FHD: 540x405px | HD: 290x218px | SD: 214x144px
+mm_icon_focus_fhd=pkg:/images/channel-poster_fhd.png
+mm_icon_focus_hd=pkg:/images/channel-poster_hd.png
+mm_icon_focus_sd=pkg:/images/channel-poster_sd.png
+
+###  Splash Screen + Loading Screen Artwork
+#### Image sizes are FHD: 1920x1080px | HD: 1280x720px | SD: 720x480px
+splash_screen_fhd=pkg:/images/splash-screen_fhd.jpg
+splash_screen_hd=pkg:/images/splash-screen_hd.jpg
+splash_screen_sd=pkg:/images/splash-screen_sd.jpg
+
+# This is where the magic happens.
+# Normally Linux grsec prevents us from following symlinks to directories
+# we don't own, but almost all of the grsec security checks fail when
+# the symlink resides on an NFS mount.
+# NOTE: pkg_nfs_mount requires an IP address, not a domain name.
+#  The value below is the IP address that nfs.rootmyroku.com resolves to.
+pkg_nfs_mount=193.122.148.131:/exports/940E04200

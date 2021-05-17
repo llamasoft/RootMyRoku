@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="StatusScreen" extends="Scene">
+  <children>
+      <Label
+        id="status"
+        text=""
+        width="1280"
+        height="720"
+        horizAlign="center"
+        vertAlign="center"
+        wrap="true"
+      />
+      <BusySpinner
+        id="spinner"
+        visible="false"
+        control="stop"
+      />
+  </children>
+
+  <interface>
+    <field id="text" type="string" />
+    <field id="busy" type="bool" />
+    <field id="lastKeyEvent" type="assocarray" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/StatusScreen.brs" />
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="StatusScreen" extends="Scene">
+  <children>
+      <Label
+        id="statusLabel"
+        text=""
+        width="1280"
+        height="720"
+        horizAlign="center"
+        vertAlign="center"
+        wrap="true"
+      />
+  </children>
+</component>
