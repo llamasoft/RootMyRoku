@@ -21,6 +21,11 @@ A big thank you to ammar2 and popeax from the [Exploitee.rs](https://exploitee.r
 1. Upload `dev-channel.zip` using the guide from the previous step.
 1. Follow the prompts on screen, then reboot to jailbreak!
 
+## Applications
+
+* Using a Roku TV to drive ambient lighting: https://www.youtube.com/watch?v=V_enynuw-rc
+  ([details](https://blog.ammaraskar.com/roku-tv-philips-hues/)).
+
 
 ## F.A.Q.
 
