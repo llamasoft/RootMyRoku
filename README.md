@@ -60,8 +60,8 @@ While RokuOS v10 has started rolling out, many devices have not received the upd
 
 This is a precautionary measure to prevent the jailbreak from being disabled or removed.  
 In the past, Roku has taken some _creative_ measures to forcefully patch jailbroken devices.
-One such example was an update to the screensaver channel that would check for a telnet service,
-connect to it, and command it to un-root and update the device.
+One such example was an update to a so-called screensaver channel that would check for a telnet
+service, connect to it, and command it to un-root and update the device.
 
 Unfortunately, the servers used for channel and firmware updates the same ones used
 to communicate with Roku in general.  Blocking updates means that no new channels can
