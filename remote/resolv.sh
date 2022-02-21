@@ -27,6 +27,9 @@ if [[ -s "/nvram/resolv.conf" ]]; then
     cp "/nvram/resolv.conf" "/tmp/resolv.conf"
     status "Restored previous DNS settings:"
     cat "/tmp/resolv.conf"
+    ls -al "/tmp/resolv.conf"
+    chown root:root "/tmp/resolv.conf"
+    chmod 644 "/tmp/resolv.conf"
 else
     last_resolv=""
 fi
@@ -66,5 +69,15 @@ while :; do
         cat "/tmp/resolv.conf"
     fi
 
-    sleep $(( 300 + RANDOM % 600 ))
+    # Network condition changes can cause the resolv.conf file to be reset.
+    # Monitor the file to ensure the contents don't revert.
+    delay=$(( 300 + RANDOM % 600 ))
+    while [[ "${delay}" -gt 0 ]]; do
+      if [[ "$(cat /tmp/resolv.conf)" != "${resolv}" ]]; then
+          status "Refreshing resolv.conf"
+          echo "${resolv}" > "/tmp/resolv.conf"
+      fi
+      sleep 3
+      delay=$(( delay - 3 ))
+    done
 done
